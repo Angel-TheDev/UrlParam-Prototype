@@ -23,45 +23,62 @@
     //grab param from href
     //print querystring on page or console
     console.log("window.location", window.location);
-    const param = href.search;
+    const param2 = href.search;
+    const param1 = href.search;
 
-    const blockUrl = param;
-
-
+    const blockTwoUrl = param2;
+    const blockOneUrl = param1;
 
 //Highlevel: Bring everything together
     //hide block 2 on load
     // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
+    showBlockOne();
     document.querySelector('.two').style.display = 'none';
     document.querySelector('.searching').style.display = 'none';
+
+    //showParam();
 
     //first click- show params
     //add button
     //on click of button switch pages if angel
     // ORR set timeout with searching param string
-    let clickedTwice = 0;
-   // const searching = document.querySelector('.searching');
-
+    //
+    //grab button in a var
+    //add var to showParam function
+    //
+    //on click of button show new url in window location
+    //AND show searching params 2 secs later
+    
+    //let clickedTwice = 0;
     function showParam() {
-        window.location.search = blockUrl;
-        showSearchingParam();
-        console.log('param')
-        clickedTwice = 1;
-  
+        const showsearch = document.querySelector('.searching');
+        
+        if(showsearch.style.display = 'none'){
+           // window.location.search = blockUrl;
+           showsearch.style.display = 'block';
+        }
     }
-    setTimeout(hideSearchingParam, 5000);
-
-
     
     
-
-
-
-
-
-
-
-
+    //setTimeout(hideSearchingParam, 5000);
+    
+    
+    
+    
+    //LEFT OFF: 
+    //separating the params and div blocks into functions for cleaner code
+    //BUG: block 2 keeps flickering and I need to get the firstHref to show in window --
+    //ORR take it out completely bc.. its honestly extra. 
+    
+    
+    
+    
+    
+    
+    function showBlockOne(){
+        window.location.search = blockOneUrl;
+        document.querySelector('.one').style.display = 'block';
+    }
 
 
 
@@ -83,7 +100,7 @@
   
          console.log('does anything')
          if(blockUrl.includes('angel')){
-             document.querySelector('.one').style.display = 'none';
+            document.querySelector('.one').style.display = 'none';
              document.querySelector('.two').style.display = 'block';
              console.log('switch');
  

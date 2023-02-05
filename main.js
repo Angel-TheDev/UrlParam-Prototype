@@ -24,21 +24,24 @@
     const dlpParam = href.search;
     console.log('My DLP Param:', dlpParam);
 
+    const blockUrl = dlpParam;
+
+
 
 //Highlevel: Bring everything together
     //hide block 2 on load
     // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
     document.querySelector('.two').style.display = 'none';
     
-    // test of switch page
-    //listen for click to hide one div
+    //first click- show params
     addEventListener('click', () => {
-        document.querySelector('.two').style.display = 'block';
-        document.querySelector('.one').style.display = 'none';
-        console.log('switch');
-    
+
+        window.location.search = blockUrl;
     })
-
-
+    
+    
+    // document.querySelector('.two').style.display = 'block';
+    // document.querySelector('.one').style.display = 'none';
+    // console.log('switch');
 
 

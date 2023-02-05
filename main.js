@@ -14,6 +14,21 @@
     console.log(href)
     console.log(firstHref)
 
+//Highlevel: show params in search in window.loocation--already showed in href console log beforhand
+    //grab href
+    //grab param from href
+    //print querystring on page or console
+    console.log("window.location", window.location);
+    const dlpParam = href.search;
+    console.log('My DLP Param:', dlpParam);
+
+
+
+
+
+
+
+
 // test of switch page
 //listen for click to hide one div
 addEventListener('click', () => {

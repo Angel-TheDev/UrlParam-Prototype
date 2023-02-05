@@ -6,6 +6,8 @@
 //**for a better demo, possibly add "searching for dlp in params" 
 //before changing to the 2nd page 
 //
+//
+//Extra: test with two html pages..cleaner.
 
 //Highlevel: create url
 //show in console
@@ -23,17 +25,20 @@
     console.log('My DLP Param:', dlpParam);
 
 
+//Highlevel: Bring everything together
+    //hide block 2 on load
+    // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
+    document.querySelector('.two').style.display = 'none';
+    
+    // test of switch page
+    //listen for click to hide one div
+    addEventListener('click', () => {
+        document.querySelector('.two').style.display = 'block';
+        document.querySelector('.one').style.display = 'none';
+        console.log('switch');
+    
+    })
 
 
 
 
-
-
-// test of switch page
-//listen for click to hide one div
-addEventListener('click', () => {
-    document.querySelector('.one').style.display = 'none';
-    document.querySelector('.two').style.display = 'block';
-    console.log('switch');
-
-})

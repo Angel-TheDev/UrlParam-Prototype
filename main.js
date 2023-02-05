@@ -24,7 +24,7 @@
     //print querystring on page or console
     console.log("window.location", window.location);
     const param2 = href.search;
-    const param1 = href.search;
+    const param1 = firstHref.search;
 
     const blockTwoUrl = param2;
     const blockOneUrl = param1;
@@ -33,8 +33,8 @@
     //hide block 2 on load
     // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
     showBlockOne();
-    document.querySelector('.two').style.display = 'none';
-    document.querySelector('.searching').style.display = 'none';
+    //document.querySelector('.two').style.display = 'none';
+    //document.querySelector('.searching').style.display = 'none';
 
     //showParam();
 
@@ -67,8 +67,8 @@
     
     //LEFT OFF: 
     //separating the params and div blocks into functions for cleaner code
-    //BUG: block 2 keeps flickering and I need to get the firstHref to show in window --
-    //ORR take it out completely bc.. its honestly extra. 
+    //BUG: block 2 keeps flickering!!  --
+  
     
     
     
@@ -78,6 +78,12 @@
     function showBlockOne(){
         window.location.search = blockOneUrl;
         document.querySelector('.one').style.display = 'block';
+        const one = document.querySelector('.one');
+
+        if(one.style.display = 'block'){
+            document.querySelector('.two').style.display = 'none';
+            document.querySelector('.searching').style.display = 'none';
+        }
     }
 
 

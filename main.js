@@ -13,26 +13,27 @@
 
 //Highlevel: create url
 //show in console
-    const href = document.getElementById('link');
-    const firstHref = document.getElementById('firstLink');
-    console.log(href)
-    console.log(firstHref)
+
+// const href = document.getElementById('link');
+// const firstHref = document.getElementById('firstLink');
+// console.log(href)
+// console.log(firstHref)
 
 //Highlevel: show params in search in window.loocation--already showed in href console log beforhand
-    //grab href
-    //grab param from href
-    //print querystring on page or console
-    console.log("window.location", window.location);
-    const param2 = href.search;
-    const param1 = firstHref.search;
+//grab href
+//grab param from href
+//print querystring on page or console
+// console.log("window.location", window.location);
+// const param2 = href.search;
+// const param1 = firstHref.search;
 
-    const blockTwoUrl = param2;
-    const blockOneUrl = param1;
+// const blockTwoUrl = param2;
+// const blockOneUrl = param1;
 
+showBlockOne();
 //Highlevel: Bring everything together
     //hide block 2 on load
     // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
-    showBlockOne();
     //document.querySelector('.two').style.display = 'none';
     //document.querySelector('.searching').style.display = 'none';
 
@@ -68,23 +69,34 @@
     //LEFT OFF: 
     //separating the params and div blocks into functions for cleaner code
     //BUG: block 2 keeps flickering!!  --
-  
-    
-    
-    
+  //SO, ID's are unique and more specific.
+  //Test: grabbing my id's by id instead of classes
     
     
     
     function showBlockOne(){
-        window.location.search = blockOneUrl;
-        document.querySelector('.one').style.display = 'block';
-        const one = document.querySelector('.one');
-
-        if(one.style.display = 'block'){
-            document.querySelector('.two').style.display = 'none';
-            document.querySelector('.searching').style.display = 'none';
-        }
+       // document.getElementById('one').style.display === 'block';
+       // document.getElementById('two').style.display === 'none';
+        document.getElementById('searching').style.display === 'none';
+       // const blockOne = getElementById('one');
+        console.log('showBlockOne')
     }
+    
+    
+    // function showBlockOne(){
+    //     document.querySelector('.one').style.display = 'block';
+    //     const one = document.querySelector('.one');
+        
+    //     if(one.style.display = 'block'){
+    //         window.location.search = blockOneUrl;
+    //         document.querySelector('.two').style.display = 'none';
+    //         document.querySelector('.searching').style.display = 'none';
+    //         console.log('showBlockOne')
+    //     } else {
+    //         document.querySelector('.one').style.display = 'none';
+
+    //     }
+    // }
 
 
 

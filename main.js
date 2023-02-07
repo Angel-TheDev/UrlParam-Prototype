@@ -29,8 +29,8 @@
 
 // const blockTwoUrl = param2;
 // const blockOneUrl = param1;
+   
 
-showBlockOne();
 //Highlevel: Bring everything together
     //hide block 2 on load
     // which url shows on load?? -- no params 'http://127.0.0.1:5500/'
@@ -73,30 +73,18 @@ showBlockOne();
   //Test: grabbing my id's by id instead of classes
     
     
+//   document.querySelector('.two').style.display = 'none';
+//   document.querySelector('.searching').style.display = 'none';
+    
     
     function showBlockOne(){
-       // document.getElementById('one').style.display === 'block';
-       // document.getElementById('two').style.display === 'none';
-        document.getElementById('searching').style.display === 'none';
-       // const blockOne = getElementById('one');
-        console.log('showBlockOne')
+        const one = document.getElementById('one');
+        console.log('hello')
+        if (one.style.display === 'none'){
+            one.style.display = 'block';
+            console.log(showBlockOne);
+        }
     }
-    
-    
-    // function showBlockOne(){
-    //     document.querySelector('.one').style.display = 'block';
-    //     const one = document.querySelector('.one');
-        
-    //     if(one.style.display = 'block'){
-    //         window.location.search = blockOneUrl;
-    //         document.querySelector('.two').style.display = 'none';
-    //         document.querySelector('.searching').style.display = 'none';
-    //         console.log('showBlockOne')
-    //     } else {
-    //         document.querySelector('.one').style.display = 'none';
-
-    //     }
-    // }
 
 
 

@@ -1,3 +1,18 @@
+// have both divs hidden - done in css stylesheet
+// grab the query params
+const queryStringParams = window.location.search;
+
+// search that string for trigger word
+const hasBaconParam = queryStringParams.includes('bacon');
+document.querySelector('#searching').style.display = 'none';
+if (hasBaconParam) {
+    document.querySelector('#one').style.display = 'block';
+} else {
+    document.querySelector('#two').style.display = 'block';
+}
+
+
+
 //
 //Highlevel Goal:
 //show page one
